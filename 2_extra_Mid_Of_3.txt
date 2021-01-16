@@ -1,0 +1,39 @@
+//2 extra Middle of Three
+class Solution{
+    int middle(int A, int B, int C){
+        int mid = 0;
+        if (A>B)
+        {
+            if (A>C)
+                {
+                    if(B>C)
+                        mid = B;
+                    else
+                        mid = C;
+                }
+            else {
+                if (C>B)
+                {
+                    if(A>B)
+                        mid = A;
+                    else
+                        mid = B;
+                }
+                else
+                    mid = C;
+            }
+        }
+        else {
+            if(B>C)
+                {
+                    if(A>C)
+                        mid = A;
+                    else
+                        mid = C;
+                }
+            else
+                mid = B;
+        }
+        return mid;
+    }
+}
