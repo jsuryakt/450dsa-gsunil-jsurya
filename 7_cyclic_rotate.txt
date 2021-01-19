@@ -1,0 +1,14 @@
+// https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1#
+// 7 Write a program to cyclically rotate an array by one.
+
+class Compute {
+    
+    public void rotate(long arr[], long n)
+    {
+       long temp = arr[arr.length-1] ;
+       for (int i = arr.length-2; i >= 0; i--) {
+           arr[i+1] = arr[i];
+       }
+       arr[0] = temp;
+    }
+}
